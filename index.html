@@ -1,1 +1,112 @@
 
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			#container{
+				width: 600px;
+				height: 400px;
+				position: relative;
+				margin: 100px auto;
+				border: 3px solid #000;
+				box-sizing: border-box;
+				overflow: hidden;
+			}
+			#list{
+				width: 4200px;
+				height: 400px;
+				position: absolute;
+				z-index: 1;
+			}
+			
+			#list img{
+				float: left;
+			}
+			#buttons{
+				position: absolute;
+				width: 100px;
+				height: 20px;
+				z-index: 2;
+				left:250px;
+				bottom: 20px;;
+			}
+			#buttons span{
+				cursor: pointer;
+				float: left;
+				border: 1px solid #fff;
+				width: 10px;
+				height: 10px;
+				background: #666;
+				border-radius: 50%;
+				margin-right: 5px;
+				
+			}
+			#buttons .on{
+				background: orangered;
+			}
+			
+			.arrow{
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				display: none;
+				cursor: pointer;
+				text-align: center;
+				font-size: 30px;
+				font-weight: 700;
+				position: absolute;
+				text-decoration: none;
+				z-index: 2;
+				top: 180px;
+				background-color: rgba(0,0,0,0.3);
+				color: #fff;
+			}
+			.arrow:hover{
+				background-color: rgba(0,0,0,0.7);
+			}
+			#container:hover .arrow{
+				display: block;
+			}
+			
+			#prev{
+				left:20px;
+			}
+				#next{
+				right:20px;
+			}
+		</style>
+		
+		<script src="js/lunbo.js">
+			
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="list" style="left:-600px">
+				<img src="img/5.jpg" alt="" />
+				<img src="img/1.jpg" alt="" />
+				<img src="img/2.jpg" alt="" />
+				<img src="img/3.jpg" alt="" />
+				<img src="img/4.jpg" alt="" />
+				<img src="img/5.jpg" alt="" />
+				<img src="img/1.jpg" alt="" />
+			</div>
+			
+			<div id="buttons">
+				<span index="1" class="on"></span>
+				<span index="2"></span>
+				<span index="3"></span>
+				<span index="4"></span>
+				<span index="5"></span>
+			</div>
+			<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+			<a href="javascript:;" id="next" class="arrow">&gt;</a>
+		</div>
+	</body>
+</html>
